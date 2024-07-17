@@ -25,7 +25,8 @@ const handleLoginMethodChange = (method) => {
 }
 
 const handleSubmit = async (data) => {
-  await createSessions(data)
+  const { token } = await createSessions(data)
+  localStorage.setItem('token', token)
 }
 </script>
 
