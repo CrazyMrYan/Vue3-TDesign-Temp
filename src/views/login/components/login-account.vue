@@ -1,5 +1,5 @@
 <template>
-  <t-form ref="form" :data="formData" colon :label-width="0" @reset="onReset" @submit="onSubmit">
+  <t-form ref="form" :data="formData" colon :label-width="0">
     <t-form-item>
       <h2 class="login-page--title">登录</h2>
     </t-form-item>
@@ -26,14 +26,13 @@
     </t-form-item>
 
     <t-form-item>
-      <t-button theme="primary" size="large" shape="round" type="submit" block>登录</t-button>
+      <t-button @click="onSubmit" theme="primary" size="large" shape="round" block>登录</t-button>
     </t-form-item>
   </t-form>
 </template>
 
 <script setup>
 import { reactive, defineEmits } from 'vue'
-import { MessagePlugin } from 'tdesign-vue-next'
 import { User1Icon, LockOnIcon } from 'tdesign-icons-vue-next'
 
 const emit = defineEmits(['on-submit'])
@@ -43,14 +42,8 @@ const formData = reactive({
   password: ''
 })
 
-const onReset = () => {
-  MessagePlugin.success('重置成功')
-}
-
-const onSubmit = ({ validateResult }) => {
-  if (validateResult === true) {
-    emit('on-submit', formData)
-  }
+const onSubmit = () => {
+  emit('on-submit', formData)
 }
 </script>
 

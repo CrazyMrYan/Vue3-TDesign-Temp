@@ -16,6 +16,7 @@ import { ref } from 'vue'
 import LoginAccount from './components/login-account.vue'
 import LoginEmail from './components/login-email.vue'
 import LoginMethodChange from './components/login-method-change.vue'
+import { createSessions } from '@/apis/users'
 
 const loginMethod = ref('account')
 
@@ -23,7 +24,9 @@ const handleLoginMethodChange = (method) => {
   loginMethod.value = method
 }
 
-const handleSubmit = () => {}
+const handleSubmit = async (data) => {
+  await createSessions(data)
+}
 </script>
 
 <style scoped>
