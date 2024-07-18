@@ -12,13 +12,20 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, defineOptions } from 'vue'
 import LoginAccount from './components/login-account.vue'
 import LoginEmail from './components/login-email.vue'
 import LoginMethodChange from './components/login-method-change.vue'
 import { createSessions } from '@/apis/users'
+import { useRouter } from 'vue-router'
+
+defineOptions({
+  name: 'LoginPage'
+})
 
 const loginMethod = ref('account')
+
+const router = useRouter()
 
 const handleLoginMethodChange = (method) => {
   loginMethod.value = method
@@ -27,6 +34,7 @@ const handleLoginMethodChange = (method) => {
 const handleSubmit = async (data) => {
   const { token } = await createSessions(data)
   localStorage.setItem('token', token)
+  router.push({ name: 'home' })
 }
 </script>
 
