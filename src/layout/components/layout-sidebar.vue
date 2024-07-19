@@ -1,7 +1,8 @@
 <template>
   <aside class="sidebar">
     <div class="logo">
-      <img src="@/assets/logo.png" alt="" srcset="" />
+      Diskcloud
+      <!-- <img src="@/assets/logo.png" alt="Diskcloud" srcset="" /> -->
     </div>
     <nav class="menu">
       <a href="#" class="menu-item">仪表盘</a>
@@ -10,6 +11,7 @@
       <a href="#" class="menu-item">视频, 音频</a>
       <a href="#" class="menu-item">其他</a>
     </nav>
+    <img src="@/assets/illustration.svg" alt="" />
   </aside>
 </template>
 
@@ -23,12 +25,18 @@ defineOptions({
 
 <style scoped>
 .sidebar {
-  width: 250px;
+  width: var(--td-size-21);
   background-color: var(--td-bg-color-container);
-  padding: 20px;
+  padding: var(--td-size-7);
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.logo {
+  height: var(--td-size-18);
+  font-size: var(--td-size-10);
+  color: var(--td-brand-color-active);
 }
 
 .logo img {
@@ -37,13 +45,14 @@ defineOptions({
 
 .menu {
   width: 100%;
+  flex: 1;
 }
 
 .menu-item {
   display: block;
   width: 100%;
-  padding: 15px 20px;
-  margin-bottom: 10px;
+  padding: var(--td-size-6) var(--td-size-7);
+  margin-bottom: var(--td-size-5);
   text-decoration: none;
   color: #333;
   border-radius: 5px;
