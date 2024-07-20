@@ -1,15 +1,15 @@
 <template>
   <aside class="sidebar">
-    <div class="logo">
-      Diskcloud
-      <!-- <img src="@/assets/logo.png" alt="Diskcloud" srcset="" /> -->
-    </div>
+    <div class="logo">Diskcloud</div>
     <nav class="menu">
-      <a href="#" class="menu-item">仪表盘</a>
-      <a href="#" class="menu-item">文件</a>
-      <a href="#" class="menu-item">图像</a>
-      <a href="#" class="menu-item">视频, 音频</a>
-      <a href="#" class="menu-item">其他</a>
+      <router-link
+        v-for="menuItem in baseMenuRoutes"
+        :to="{ name: menuItem.name }"
+        :class="['menu-item', activeRoute(menuItem)]"
+        :key="menuItem.name"
+      >
+        <span>{{ menuItem.meta.fullName }}</span>
+      </router-link>
     </nav>
     <img src="@/assets/illustration.svg" alt="" />
   </aside>
@@ -17,10 +17,18 @@
 
 <script setup>
 import { defineOptions } from 'vue'
+import { baseMenuRoutes } from '@/router/routes'
+import { useRouter } from 'vue-router'
 
 defineOptions({
   name: 'LayoutSidebar'
 })
+
+const router = useRouter()
+
+const activeRoute = (menu) => {
+  return router.currentRoute.value.name === menu.name ? 'router-active' : ''
+}
 </script>
 
 <style scoped>
@@ -57,10 +65,12 @@ defineOptions({
   color: #333;
   border-radius: 5px;
   text-align: center;
-  transition: background-color 0.3s;
+  /* transition: background-color 0.3s; */
+  cursor: pointer;
 }
 
-.menu-item:hover {
-  background-color: #e0e0e0;
+.router-active {
+  background-color: var(--td-brand-color-active);
+  color: var(--td-font-white-1);
 }
 </style>
