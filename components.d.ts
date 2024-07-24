@@ -17,11 +17,16 @@ declare module 'vue' {
     RouterView: typeof import('vue-router')['RouterView']
     TAvatar: typeof import('tdesign-vue-next')['Avatar']
     TButton: typeof import('tdesign-vue-next')['Button']
+    TCheckbox: typeof import('tdesign-vue-next')['Checkbox']
     TForm: typeof import('tdesign-vue-next')['Form']
     TFormItem: typeof import('tdesign-vue-next')['FormItem']
     TheWelcome: typeof import('./src/components/TheWelcome.vue')['default']
     TInput: typeof import('tdesign-vue-next')['Input']
     TInputGroup: typeof import('tdesign-vue-next')['InputGroup']
+    TRadioButton: typeof import('tdesign-vue-next')['RadioButton']
+    TRadioGroup: typeof import('tdesign-vue-next')['RadioGroup']
+    TSpace: typeof import('tdesign-vue-next')['Space']
+    TTable: typeof import('tdesign-vue-next')['Table']
     WelcomeItem: typeof import('./src/components/WelcomeItem.vue')['default']
   }
 }
