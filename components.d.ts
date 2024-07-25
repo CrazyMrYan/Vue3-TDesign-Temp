@@ -21,6 +21,8 @@ declare module 'vue' {
     TForm: typeof import('tdesign-vue-next')['Form']
     TFormItem: typeof import('tdesign-vue-next')['FormItem']
     TheWelcome: typeof import('./src/components/TheWelcome.vue')['default']
+    TImage: typeof import('tdesign-vue-next')['Image']
+    TImageViewer: typeof import('tdesign-vue-next')['ImageViewer']
     TInput: typeof import('tdesign-vue-next')['Input']
     TInputGroup: typeof import('tdesign-vue-next')['InputGroup']
     TRadioButton: typeof import('tdesign-vue-next')['RadioButton']

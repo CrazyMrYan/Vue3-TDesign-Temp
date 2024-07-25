@@ -19,8 +19,11 @@
     "vue-router": "^4.3.3"
   },
   "devDependencies": {
+    "@babel/plugin-transform-react-jsx": "^7.24.7",
+    "@babel/preset-env": "^7.24.8",
+    "@babel/preset-typescript": "^7.24.7",
     "@rushstack/eslint-patch": "^1.8.0",
-    "@vitejs/plugin-vue": "^5.0.5",
+    "@vitejs/plugin-vue": "^5.1.0",
     "@vitejs/plugin-vue-jsx": "^4.0.0",
     "@vue/eslint-config-prettier": "^9.0.0",
     "eslint": "^8.57.0",

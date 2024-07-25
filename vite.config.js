@@ -40,6 +40,9 @@ export default defineConfig({
       ]
     })
   ],
+  esbuild: {
+    loader: 'jsx' // 将 loader 设置为 jsx
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
