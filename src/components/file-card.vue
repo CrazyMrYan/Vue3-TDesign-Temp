@@ -15,10 +15,10 @@
           </div>
         </template>
       </t-image-viewer>
+      <t-tooltip theme="light" placement="bottom" :content="fileItem.filename">
+        <p class="title">{{ fileItem.filename }}</p>
+      </t-tooltip>
     </div>
-    <t-tooltip theme="light" placement="bottom" :content="fileItem.filename">
-      <p class="title">{{ fileItem.filename }}</p>
-    </t-tooltip>
   </div>
 </template>
 
