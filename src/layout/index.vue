@@ -3,10 +3,6 @@
     <Sidebar />
     <div class="main-container">
       <Header />
-      <!-- <StorageInfo />
-      <DataCards />
-      <Contacts />
-      <InviteMember /> -->
       <div class="router-view--container">
         <router-view></router-view>
       </div>
@@ -38,12 +34,12 @@ import Header from './components/layout-header.vue'
   flex: 1;
   display: flex;
   flex-direction: column;
-  /* padding: 20px; */
 }
 .router-view--container {
-  padding: 20px;
+  padding: var(--td-size-7);
   background-color: #f7f7f7;
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 108px);
+  overflow: auto;
 }
 </style>

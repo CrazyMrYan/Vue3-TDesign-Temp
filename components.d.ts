@@ -7,6 +7,7 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    FileCard: typeof import('./src/components/file-card.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     IconCommunity: typeof import('./src/components/icons/IconCommunity.vue')['default']
     IconDocumentation: typeof import('./src/components/icons/IconDocumentation.vue')['default']
@@ -17,7 +18,11 @@ declare module 'vue' {
     RouterView: typeof import('vue-router')['RouterView']
     TAvatar: typeof import('tdesign-vue-next')['Avatar']
     TButton: typeof import('tdesign-vue-next')['Button']
+    TCard: typeof import('tdesign-vue-next')['Card']
     TCheckbox: typeof import('tdesign-vue-next')['Checkbox']
+    TCol: typeof import('tdesign-vue-next')['Col']
+    TContent: typeof import('tdesign-vue-next')['Content']
+    TDropdown: typeof import('tdesign-vue-next')['Dropdown']
     TForm: typeof import('tdesign-vue-next')['Form']
     TFormItem: typeof import('tdesign-vue-next')['FormItem']
     TheWelcome: typeof import('./src/components/TheWelcome.vue')['default']
@@ -25,10 +30,13 @@ declare module 'vue' {
     TImageViewer: typeof import('tdesign-vue-next')['ImageViewer']
     TInput: typeof import('tdesign-vue-next')['Input']
     TInputGroup: typeof import('tdesign-vue-next')['InputGroup']
+    TLayout: typeof import('tdesign-vue-next')['Layout']
     TRadioButton: typeof import('tdesign-vue-next')['RadioButton']
     TRadioGroup: typeof import('tdesign-vue-next')['RadioGroup']
+    TRow: typeof import('tdesign-vue-next')['Row']
     TSpace: typeof import('tdesign-vue-next')['Space']
     TTable: typeof import('tdesign-vue-next')['Table']
+    TTooltip: typeof import('tdesign-vue-next')['Tooltip']
     WelcomeItem: typeof import('./src/components/WelcomeItem.vue')['default']
   }
 }

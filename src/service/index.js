@@ -47,7 +47,7 @@ service.interceptors.response.use(
 
       if (error.response.status === 401) {
         // 重定向到登录页
-        // window.location.href = '/login'
+        window.location.href = '/login'
       }
     } else {
       MessagePlugin.error('连接到服务器失败')
