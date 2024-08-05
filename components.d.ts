@@ -31,12 +31,14 @@ declare module 'vue' {
     TInput: typeof import('tdesign-vue-next')['Input']
     TInputGroup: typeof import('tdesign-vue-next')['InputGroup']
     TLayout: typeof import('tdesign-vue-next')['Layout']
+    TPagination: typeof import('tdesign-vue-next')['Pagination']
     TRadioButton: typeof import('tdesign-vue-next')['RadioButton']
     TRadioGroup: typeof import('tdesign-vue-next')['RadioGroup']
     TRow: typeof import('tdesign-vue-next')['Row']
     TSpace: typeof import('tdesign-vue-next')['Space']
     TTable: typeof import('tdesign-vue-next')['Table']
     TTooltip: typeof import('tdesign-vue-next')['Tooltip']
+    TUpload: typeof import('tdesign-vue-next')['Upload']
     WelcomeItem: typeof import('./src/components/WelcomeItem.vue')['default']
   }
 }

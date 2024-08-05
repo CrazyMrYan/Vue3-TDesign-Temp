@@ -6,3 +6,14 @@ export const getFiles = (params) =>
     method: 'get',
     params
   })
+
+export const uploadFiles = (params, data) =>
+  service({
+    url: 'files',
+    method: 'post',
+    headers: {
+      'Content-Type': 'form-data'
+    },
+    params,
+    data
+  })
